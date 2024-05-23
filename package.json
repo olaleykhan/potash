@@ -1,5 +1,6 @@
 {
 	"name": "potash",
+	"description": "A Todo list written in Svelte",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
