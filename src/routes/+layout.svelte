@@ -1,11 +1,11 @@
 <main>
-    
-    <p> right here appears to be the basic layout of a somewhat Svelty component.</p>
+   
     <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/noda">Noda</a></li>
-            <li><a href="/noda/page">Noda Page</a></li>  
+        
+        <ul class="nav-list">
+            <li class="nav-item"><a href="/">Home</a></li>
+            <li class="nav-item"><a href="/noda">Noda</a></li>
+            <li class="nav-item"><a href="/noda/page">Noda Page</a></li>  
         </ul>
     </nav>
 
@@ -13,17 +13,27 @@
 </main>
 
 <style>
-    /* global styling */
-    main{
-        background-color: lightblue;
-        height:100vh;
-        padding: 2em;
-        margin: 0;
-        border-radius: 1em;
+    nav{
+        margin-top: 24px;
+    }
+    ul.nav-list{
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        max-width: 800px;
+        margin: 0 auto;
     }
 
-    p{
-        color: pink;
-        font-size: larger;
+    li.nav-item{
+        display: inline;
+    }
+    li.nav-item a{
+        text-decoration: none;
+        padding: 8px 24px;;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        color: #333;
+        font-weight: 600;
     }
 </style>
