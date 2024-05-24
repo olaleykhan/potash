@@ -1,6 +1,7 @@
 <script lang="ts" >
 
     // The scripts for the index page go here
+    import type {ComponentEvents} from 'svelte'
     import {Button, TodoItem} from "$lib"
 	import type { H } from "vitest/dist/reporters-yx5ZTtEV.js";
 
@@ -36,15 +37,15 @@
  
     }
     
-    const handleOnChange = (event: Event) => {
-    const target = event.target as HTMLInputElement;
-    todoInput = target.value;
-  };
+//     const handleOnChange = (event: Event) => {
+//     const target = event.target as HTMLInputElement;
+//     todoInput = target.value;
+//   };
 
-  function handleDelete(event: Event){
+  function handleDelete(event: ComponentEvents<TodoItem>['delete']){
       console.log("I am being deleted.... id: ", event)
     //   TODO: terrible typescript support. improve typing support in project
-      const id = event.detail.id as number ;
+      const id = event.detail ;
       todos = todos.filter(todo => todo.id !== id)
     }
 
