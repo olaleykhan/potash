@@ -14,6 +14,9 @@
       dispatch('delete', id)
     }
 
+    
+    console.log(" PROPS FROM todo item : ",$$props);
+
 </script>
 
 <li>
